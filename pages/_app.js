@@ -1,7 +1,25 @@
-import '../styles/globals.css'
+import Header from "@components/Header"
+import useSession from "@lib/session"
+import Link from "next/link"
+import "./_app.css"
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+    const session = useSession()
+    const newPageProps = {
+        ...pageProps,
+        session
+    }
+    return (
+        <>
+            <Header>
+                <Link href="/" passHref>
+                    app
+                </Link>
+            </Header>
+
+            <main className="page">
+                <Component {...newPageProps} />
+            </main>
+        </>
+    )
 }
-
-export default MyApp
