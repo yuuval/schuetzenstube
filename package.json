@@ -1,7 +1,10 @@
 {
+  "homepage": "https://yuuval.github.io/schuetzenstube-schliern",
   "name": "schuetzenstube",
   "scripts": {
     "dev": "concurrently --kill-others \"npm run lint-watch\" \"next dev\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build:app": "concurrently --kill-others \"npm run server\" \"npm run build\"",
     "start": "concurrently --kill-others \"npm run server\" \"next start\"",
     "build": "next build",
