@@ -9,6 +9,7 @@
     margin-top: 3em;
     font-size: 15px;
     text-decoration: underline;
+    text-align: center;
 }
 .accordion{
     width: 100%;
@@ -27,5 +28,17 @@
     text-align: center;
 }
 .mapResponsive{
-     margin-top: 3em;
+    border: outset #333333;
+    height: 200px;
+    width: 250px;
+    margin-top: 1em;
+    margin-bottom: 1em;
  }
+
+.openingTimes{
+    text-align: center;
+    font-size: 15px;
+}
+.openingTimes aside{
+    text-decoration: underline;
+}

@@ -2,29 +2,31 @@ import {useRouter} from "next/router";
 import {useRef, useState} from "react";
 import styles from "./KontaktForm.module.css"
 import Form from 'react-bootstrap/Form';
-import {isAfter, isBefore, addDays, format} from 'date-fns'
+import {isBefore} from 'date-fns'
 import emailjs from "@emailjs/browser";
 
+{/*Model des Error Handlings*/}
 const defaultModel = {
     title: "", message: "", reservationTime: "", email: ""
 }
 
 function validateModel(formular) {
+    {/*Funktion die überprüft ob die unten angegebene Validierung stimmt, falls nicht erscheint ein Text auf*/}
     const errors = {
         title: "", message: "", reservationTime: "", email: ""
     }
     let isValid = true;
 
+    {/*Falls unter 5 Zeichen*/}
     if (formular.title.trim().length < 5) {
         errors.title = "Titel darf nicht < 5 Zeichen sein"
         isValid = false;
     }
+    {/*Falls unter 5 Zeichen*/}
     if (formular.message.trim().length === null || formular.message.trim().length < 5) {
         errors.message = "Message darf nicht <5 Zeichen sein"
         isValid = false;
     }
-    //const inThreeDays = addDays(new Date(),3)
-    //console.log(format(inThreeDays, "yyyy-MM-dd").charAt(10))
     let date = new Date();
     /* Date format you have */
     let dateMDY = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -34,6 +36,7 @@ function validateModel(formular) {
         errors.reservationTime = "Reservationszeit muss mindestens einen Tag später gewählt werden"
         isValid = false
     }
+    {/*E-Mail nicht leer*/}
     if (formular.email.trim().length === 0) {
         errors.email = "E-Mail darf nicht leer sein"
         isValid = false;
@@ -42,12 +45,16 @@ function validateModel(formular) {
     return {errors, isValid}
 }
 export default function KontaktForm() {
+    {/*React Feature. Ist wie ein Navigator, der dich durch das Web navigieren kann*/}
     const router = useRouter()
+    {/*Getter und Setter im Frontend*/}
     const [formular, setFormular] = useState(defaultModel)
     const [isLoading, setIsLoading] = useState(false)
     const [errors, setErrors] = useState(defaultModel)
+    {/*Refferenziert auf angegebenes <form>*/}
     const form = useRef();
 
+    {/*Falls Änderungen in den Eingabefeldern gemacht werden, werden diese hier entdeckt und die Werte neu gesetzt*/}
     const handleChange = (e) => {
         const field = e.target.name
         const value = e.target.value
@@ -56,27 +63,32 @@ export default function KontaktForm() {
         })
     }
 
+    {/*Beim Abschicken des Formulares*/}
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsLoading(true)
         setErrors(defaultModel)
 
+        {/*Aufruf Validierungsmethode*/}
         const result = validateModel(formular)
         if (!result.isValid) {
             setErrors(result.errors)
             setIsLoading(false)
             return
         }
+        {/*Falls Alles ok*/}
+        // Email funktion und alert der nach home führt.
         if(result.isValid){
-            // Email funktion und alert der nach home führt.
+            // Sendet Email mit angegebenen Daten.
             emailjs.sendForm('service_pjxcw8w', 'template_xrzmdbc', form.current, 'UjqS-5rIq1BHm8GNV')
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {
                     console.log(error.text);
                 });
-
+            // Alert Nachricht
             alert("Die Nachricht wurde erfolgreich gesendet. Der Besitzer wird Sie so schnell wie möglich kontaktieren.")
+            // Homepage navigation
             router.push("/")
         }
         setIsLoading(false)

@@ -1,0 +1,13 @@
+.aside{
+    margin-top: 3em;
+    font-size: 15px;
+    text-decoration: underline;
+    text-align: center;
+}
+.openingTimes{
+    text-align: center;
+    font-size: 15px;
+}
+.openingTimes aside{
+    text-decoration: underline;
+}
