@@ -25,7 +25,7 @@
     text-decoration: underline;
 }
 
-.headerDiv{
+.headerDiv {
     top: 0;
     position: sticky;
     padding: 0.5em;

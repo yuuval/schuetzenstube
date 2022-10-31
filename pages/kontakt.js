@@ -5,24 +5,28 @@ import Form from 'react-bootstrap/Form';
 import {isBefore} from 'date-fns'
 import emailjs from "@emailjs/browser";
 
-{/*Model des Error Handlings*/}
+{/*Model des Error Handlings*/
+}
 const defaultModel = {
     title: "", message: "", reservationTime: "", email: ""
 }
 
 function validateModel(formular) {
-    {/*Funktion die überprüft ob die unten angegebene Validierung stimmt, falls nicht erscheint ein Text auf*/}
+    {/*Funktion die überprüft ob die unten angegebene Validierung stimmt, falls nicht erscheint ein Text auf*/
+    }
     const errors = {
         title: "", message: "", reservationTime: "", email: ""
     }
     let isValid = true;
 
-    {/*Falls unter 5 Zeichen*/}
+    {/*Falls unter 5 Zeichen*/
+    }
     if (formular.title.trim().length < 5) {
         errors.title = "Titel darf nicht < 5 Zeichen sein"
         isValid = false;
     }
-    {/*Falls unter 5 Zeichen*/}
+    {/*Falls unter 5 Zeichen*/
+    }
     if (formular.message.trim().length === null || formular.message.trim().length < 5) {
         errors.message = "Message darf nicht <5 Zeichen sein"
         isValid = false;
@@ -36,7 +40,8 @@ function validateModel(formular) {
         errors.reservationTime = "Reservationszeit muss mindestens einen Tag später gewählt werden"
         isValid = false
     }
-    {/*E-Mail nicht leer*/}
+    {/*E-Mail nicht leer*/
+    }
     if (formular.email.trim().length === 0) {
         errors.email = "E-Mail darf nicht leer sein"
         isValid = false;
@@ -44,17 +49,22 @@ function validateModel(formular) {
 
     return {errors, isValid}
 }
+
 export default function KontaktForm() {
-    {/*React Feature. Ist wie ein Navigator, der dich durch das Web navigieren kann*/}
+    {/*React Feature. Ist wie ein Navigator, der dich durch das Web navigieren kann*/
+    }
     const router = useRouter()
-    {/*Getter und Setter im Frontend*/}
+    {/*Getter und Setter im Frontend*/
+    }
     const [formular, setFormular] = useState(defaultModel)
     const [isLoading, setIsLoading] = useState(false)
     const [errors, setErrors] = useState(defaultModel)
-    {/*Refferenziert auf angegebenes <form>*/}
+    {/*Refferenziert auf angegebenes <form>*/
+    }
     const form = useRef();
 
-    {/*Falls Änderungen in den Eingabefeldern gemacht werden, werden diese hier entdeckt und die Werte neu gesetzt*/}
+    {/*Falls Änderungen in den Eingabefeldern gemacht werden, werden diese hier entdeckt und die Werte neu gesetzt*/
+    }
     const handleChange = (e) => {
         const field = e.target.name
         const value = e.target.value
@@ -63,22 +73,25 @@ export default function KontaktForm() {
         })
     }
 
-    {/*Beim Abschicken des Formulares*/}
+    {/*Beim Abschicken des Formulares*/
+    }
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsLoading(true)
         setErrors(defaultModel)
 
-        {/*Aufruf Validierungsmethode*/}
+        {/*Aufruf Validierungsmethode*/
+        }
         const result = validateModel(formular)
         if (!result.isValid) {
             setErrors(result.errors)
             setIsLoading(false)
             return
         }
-        {/*Falls Alles ok*/}
+        {/*Falls Alles ok*/
+        }
         // Email funktion und alert der nach home führt.
-        if(result.isValid){
+        if (result.isValid) {
             // Sendet Email mit angegebenen Daten.
             emailjs.sendForm('service_pjxcw8w', 'template_xrzmdbc', form.current, 'UjqS-5rIq1BHm8GNV')
                 .then((result) => {
@@ -111,7 +124,8 @@ export default function KontaktForm() {
 
                 <fieldset className={styles.form}>
                     <p>Reservationszeitpunkt*</p>
-                    <Form.Control type="date" name="reservationTime" onChange={handleChange} value={formular.reservationTime} required/>
+                    <Form.Control type="date" name="reservationTime" onChange={handleChange}
+                                  value={formular.reservationTime} required/>
                     {errors.reservationTime && <div className={styles.error}>{errors.reservationTime}</div>}
                 </fieldset>
 

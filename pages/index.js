@@ -42,134 +42,140 @@ export default function IndexPage() {
                 <Container>
                     <Row>
                         <Col sm>
-                        <article>
-                        <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Montag</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className={styles.menuTitle}>
-                                        <Table responsive="sm">
-                                            <thead className={styles.alignCenter}>
-                                            <tr>
-                                                <th><h2>Gericht1</h2></th>
-                                                <th><h2>Gericht2</h2></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody className={styles.alignCenter}>
-                                            <tr>
-                                                <td><p>000.-</p><span>Vegi &#10005;</span></td>
-                                                <td><p>000.-</p><span>Vegi &#10003;</span></td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </article></Col>
+                            <article>
+                                <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Montag</Accordion.Header>
+                                        <Accordion.Body>
+                                            <div className={styles.menuTitle}>
+                                                <Table responsive="sm">
+                                                    <thead className={styles.alignCenter}>
+                                                    <tr>
+                                                        <th><h2>Gericht1</h2></th>
+                                                        <th><h2>Gericht2</h2></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody className={styles.alignCenter}>
+                                                    <tr>
+                                                        <td><p>000.-</p><span>Vegi &#10005;</span></td>
+                                                        <td><p>000.-</p><span>Vegi &#10003;</span></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </Table>
+                                            </div>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                            </article>
+                        </Col>
                         <Col sm>
                             <article>
-                        <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Dienstag</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className={styles.menuTitle}>
-                                        <Table responsive="sm">
-                                            <thead className={styles.alignCenter}>
-                                            <tr>
-                                                <th><h2>Gericht1</h2></th>
-                                                <th><h2>Gericht2</h2></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody className={styles.alignCenter}>
-                                            <tr>
-                                                <td><p>000.-</p><span>Vegi &#10005;</span></td>
-                                                <td><p>000.-</p><span>Vegi &#10003;</span></td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </article></Col>
+                                <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Dienstag</Accordion.Header>
+                                        <Accordion.Body>
+                                            <div className={styles.menuTitle}>
+                                                <Table responsive="sm">
+                                                    <thead className={styles.alignCenter}>
+                                                    <tr>
+                                                        <th><h2>Gericht1</h2></th>
+                                                        <th><h2>Gericht2</h2></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody className={styles.alignCenter}>
+                                                    <tr>
+                                                        <td><p>000.-</p><span>Vegi &#10005;</span></td>
+                                                        <td><p>000.-</p><span>Vegi &#10003;</span></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </Table>
+                                            </div>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                            </article>
+                        </Col>
                         <Col sm>
                             <article>
-                        <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Mittwoch</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className={styles.menuTitle}>
-                                        <Table responsive="sm">
-                                            <thead className={styles.alignCenter}>
-                                            <tr>
-                                                <th><h2>Gericht1</h2></th>
-                                                <th><h2>Gericht2</h2></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody className={styles.alignCenter}>
-                                            <tr>
-                                                <td><p>000.-</p><span>Vegi &#10005;</span></td>
-                                                <td><p>000.-</p><span>Vegi &#10003;</span></td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </article></Col>
+                                <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Mittwoch</Accordion.Header>
+                                        <Accordion.Body>
+                                            <div className={styles.menuTitle}>
+                                                <Table responsive="sm">
+                                                    <thead className={styles.alignCenter}>
+                                                    <tr>
+                                                        <th><h2>Gericht1</h2></th>
+                                                        <th><h2>Gericht2</h2></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody className={styles.alignCenter}>
+                                                    <tr>
+                                                        <td><p>000.-</p><span>Vegi &#10005;</span></td>
+                                                        <td><p>000.-</p><span>Vegi &#10003;</span></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </Table>
+                                            </div>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                            </article>
+                        </Col>
                         <Col sm>
                             <article>
-                        <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Donnerstag</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className={styles.menuTitle}>
-                                        <Table responsive="sm">
-                                            <thead className={styles.alignCenter}>
-                                            <tr>
-                                                <th><h2>Gericht1</h2></th>
-                                                <th><h2>Gericht2</h2></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody className={styles.alignCenter}>
-                                            <tr>
-                                                <td><p>000.-</p><span>Vegi &#10005;</span></td>
-                                                <td><p>000.-</p><span>Vegi &#10003;</span></td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </article></Col>
-                        <Col sm><article>
-                        <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Freitag</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className={styles.menuTitle}>
-                                        <Table responsive="sm">
-                                            <thead className={styles.alignCenter}>
-                                            <tr>
-                                                <th><h2>Gericht1</h2></th>
-                                                <th><h2>Gericht2</h2></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody className={styles.alignCenter}>
-                                            <tr>
-                                                <td><p>000.-</p><span>Vegi &#10005;</span></td>
-                                                <td><p>000.-</p><span>Vegi &#10003;</span></td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </article></Col>
+                                <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Donnerstag</Accordion.Header>
+                                        <Accordion.Body>
+                                            <div className={styles.menuTitle}>
+                                                <Table responsive="sm">
+                                                    <thead className={styles.alignCenter}>
+                                                    <tr>
+                                                        <th><h2>Gericht1</h2></th>
+                                                        <th><h2>Gericht2</h2></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody className={styles.alignCenter}>
+                                                    <tr>
+                                                        <td><p>000.-</p><span>Vegi &#10005;</span></td>
+                                                        <td><p>000.-</p><span>Vegi &#10003;</span></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </Table>
+                                            </div>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                            </article>
+                        </Col>
+                        <Col sm>
+                            <article>
+                                <Accordion className={styles.accordion} defaultActiveKey={['0']} alwaysOpen>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Freitag</Accordion.Header>
+                                        <Accordion.Body>
+                                            <div className={styles.menuTitle}>
+                                                <Table responsive="sm">
+                                                    <thead className={styles.alignCenter}>
+                                                    <tr>
+                                                        <th><h2>Gericht1</h2></th>
+                                                        <th><h2>Gericht2</h2></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody className={styles.alignCenter}>
+                                                    <tr>
+                                                        <td><p>000.-</p><span>Vegi &#10005;</span></td>
+                                                        <td><p>000.-</p><span>Vegi &#10003;</span></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </Table>
+                                            </div>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                            </article>
+                        </Col>
                     </Row>
                 </Container>
             </section>
