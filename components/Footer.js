@@ -15,9 +15,9 @@ export default function Footer() {
                                                           height="80px"/></Col>
                     <Col style={{textAlign: "center"}}><p className={styles.openingTimes}>Ramadan Shala</p></Col>
                     <Col style={{textAlign: "right", marginBottom: "1em"}}><SocialIcon style={{height: 25, width: 25}}
-                                                                                       url="https://twitter.com/"/><br/>< SocialIcon
-                        style={{height: 25, width: 25}} url="https://instagram.com/"/><br/><SocialIcon
-                        style={{height: 25, width: 25}} url="https://whatsapp.com/"/></Col>
+                                                                                       url="https://twitter.com/"/><br/>
+                        <SocialIcon style={{height: 25, width: 25}} url="https://instagram.com/"/><br/>
+                        <SocialIcon style={{height: 25, width: 25}} url="https://whatsapp.com/"/></Col>
                 </Row>
             </Container>
         </div>

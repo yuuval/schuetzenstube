@@ -8,7 +8,6 @@ export default function AboutUsPage() {
                 <img src="/remoImg.jpg" alt="Picture about me"/>
             </div>
             <hr style={{"borderWidth": "100%"}}/>
-            <section>
                 <article className={styles.posts}>
                     <h2>Karriere</h2>
                     <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -41,7 +40,6 @@ export default function AboutUsPage() {
                         justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
                         ipsum dolor sit amet.</p>
                 </article>
-            </section>
         </div>
     )
 }

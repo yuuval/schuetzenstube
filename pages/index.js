@@ -51,8 +51,8 @@ export default function IndexPage() {
                                                 <Table responsive="sm">
                                                     <thead className={styles.alignCenter}>
                                                     <tr>
-                                                        <th><h2>Gericht1</h2></th>
-                                                        <th><h2>Gericht2</h2></th>
+                                                        <th>Gericht1</th>
+                                                        <th>Gericht2</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody className={styles.alignCenter}>
@@ -78,8 +78,8 @@ export default function IndexPage() {
                                                 <Table responsive="sm">
                                                     <thead className={styles.alignCenter}>
                                                     <tr>
-                                                        <th><h2>Gericht1</h2></th>
-                                                        <th><h2>Gericht2</h2></th>
+                                                        <th>Gericht1</th>
+                                                        <th>Gericht2</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody className={styles.alignCenter}>
@@ -105,8 +105,8 @@ export default function IndexPage() {
                                                 <Table responsive="sm">
                                                     <thead className={styles.alignCenter}>
                                                     <tr>
-                                                        <th><h2>Gericht1</h2></th>
-                                                        <th><h2>Gericht2</h2></th>
+                                                        <th>Gericht1</th>
+                                                        <th>Gericht2</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody className={styles.alignCenter}>
@@ -132,8 +132,8 @@ export default function IndexPage() {
                                                 <Table responsive="sm">
                                                     <thead className={styles.alignCenter}>
                                                     <tr>
-                                                        <th><h2>Gericht1</h2></th>
-                                                        <th><h2>Gericht2</h2></th>
+                                                        <th>Gericht1</th>
+                                                        <th>Gericht2</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody className={styles.alignCenter}>
@@ -159,8 +159,8 @@ export default function IndexPage() {
                                                 <Table responsive="sm">
                                                     <thead className={styles.alignCenter}>
                                                     <tr>
-                                                        <th><h2>Gericht1</h2></th>
-                                                        <th><h2>Gericht2</h2></th>
+                                                        <th>Gericht1</th>
+                                                        <th>Gericht2</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody className={styles.alignCenter}>
@@ -183,20 +183,14 @@ export default function IndexPage() {
             <section className={styles.openingTimes}>
                 <aside className={styles.aside}>Öffnungszeiten</aside>
                 <br/>
-                <article>
-                    <aside>Montag-Freitag</aside>
-                    <p>13:00-20:00</p>
-                </article>
+                <aside>Montag-Freitag</aside>
+                <p>13:00-20:00</p>
                 <br/>
-                <article>
-                    <aside>Samstag</aside>
-                    <p>15:00-22:00</p>
-                </article>
+                <aside>Samstag</aside>
+                <p>15:00-22:00</p>
                 <br/>
-                <article>
-                    <aside>Sonntag</aside>
-                    <p>Geschlossen</p>
-                </article>
+                <aside>Sonntag</aside>
+                <p>Geschlossen</p>
             </section>
             <aside className={styles.aside}>Standort</aside>
             {/*Google Maps*/}
@@ -205,14 +199,14 @@ export default function IndexPage() {
                     src="https://maps.google.ch/maps?q=Plattenweg%2062%203098%20Schliern&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     width="100%" height="100%"></iframe>
             </div>
-            <section className={styles.openingTimes}>
+            <div className={styles.openingTimes}>
                 <aside className={styles.aside}>Reservationen unter:</aside>
                 {/*Kontaktmöglichkeiten*/}
                 <p>+41 xx xxx xx xx <br/>oder<br/><Link href="/kontakt">Kontaktformular</Link></p>
                 <hr style={{"borderWidth": "100%"}}/>
                 <aside>Adresse</aside>
                 <p>Plattenweg 62 <br/>3098 Schliern</p>
-            </section>
+            </div>
         </div>
     )
 }
